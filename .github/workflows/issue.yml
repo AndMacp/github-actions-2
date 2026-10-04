@@ -9,4 +9,4 @@ jobs:
 
         steps:
             - name: Print issue
-              run: echo "New issue created ${{github.event.issue}}"
+              run: echo "New issue created ${{toJson(github.event.issue)}}"
