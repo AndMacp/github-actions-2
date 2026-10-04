@@ -1,0 +1,12 @@
+name: issue workflow
+on: 
+    issues: 
+        types: [opened]
+
+jobs:
+    issueWorkflow:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Print issue
+              run: echo "New issue created ${{github.event.issue}}"
